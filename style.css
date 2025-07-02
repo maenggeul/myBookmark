@@ -1,0 +1,57 @@
+body {
+  background-color: lightgray;
+}
+
+header {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  height: 4rem;
+  margin: 2rem;
+}
+
+article {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 1rem;
+  margin: 2rem 0;
+}
+
+section {
+  background-color: white;
+  padding: 1.5rem;
+  aspect-ratio: 4/5;
+  position: relative;
+}
+
+section > img {
+  border-radius: 15px;
+  aspect-ratio: 16/9;
+  max-width: 300px;
+}
+
+section > h1 {
+  font-size: 1.5rem;
+}
+
+section > span {
+  background-color: lightgray;
+  padding: 5px 10px 5px 8px;
+  font-weight: bold;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  article {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  article {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
