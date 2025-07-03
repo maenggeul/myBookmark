@@ -2,7 +2,7 @@ body {
   background-color: lightgray;
 }
 
-header {
+.bookmark-header {
   text-align: center;
   font-size: 3rem;
   font-weight: bold;
@@ -10,7 +10,7 @@ header {
   margin: 2rem;
 }
 
-article {
+.bookmark-list {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
@@ -18,24 +18,26 @@ article {
   margin: 2rem 0;
 }
 
-section {
+.bookmark-card {
   background-color: white;
   padding: 1.5rem;
   aspect-ratio: 4/5;
   position: relative;
 }
 
-section > img {
+.bookmark-card__image {
   border-radius: 15px;
   aspect-ratio: 16/9;
   max-width: 300px;
+  width: 100%;
+  height: auto;
 }
 
-section > h1 {
+.bookmark-card__title {
   font-size: 1.5rem;
 }
 
-section > span {
+.bookmark-card__tag {
   background-color: lightgray;
   padding: 5px 10px 5px 8px;
   font-weight: bold;
@@ -45,13 +47,13 @@ section > span {
 }
 
 @media (min-width: 768px) {
-  article {
+  .bookmark-list {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  article {
+  .bookmark-list {
     grid-template-columns: repeat(5, 1fr);
   }
 }
